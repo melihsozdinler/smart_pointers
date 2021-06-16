@@ -9,10 +9,12 @@
 #include <memory>
 #include "Rectangle.h"
 
+using namespace std;
+
 class WeakPointer {
 public:
-    void show();
-    void observe(weak_ptr<Rectangle> gw);
+    void Show();
+    void Observe(weak_ptr<Rectangle> gw);
 };
 
 

@@ -4,7 +4,7 @@
 
 #include "SharedPointer.h"
 
-void SharedPointer::show() {
+void SharedPointer::Show() {
     cout << "------------- Shared Pointer -------------" << endl;
     P1 = shared_ptr<Rectangle>(new Rectangle(10, 5));
     // This'll print 50

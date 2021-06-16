@@ -9,10 +9,12 @@
 #include <memory>
 #include "Rectangle.h"
 
+using namespace std;
+
 class UniquePointer {
 
 public:
-    void show();
+    void Show();
 };
 
 

@@ -4,18 +4,22 @@ using namespace std;
 #include "src/SharedPointer.h"
 #include "src/UniquePointer.h"
 #include "src/WeakPointer.h"
+#include "src/MakeShared.h"
 
 
 int main()
 {
     SharedPointer shared;
-    shared.show();
+    shared.Show();
 
     UniquePointer unique;
-    unique.show();
+    unique.Show();
 
     WeakPointer weak;
-    weak.show();
+    weak.Show();
+
+    MakeShared makeShared;
+    makeShared.Show();
 
     return 0;
 }

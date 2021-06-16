@@ -4,7 +4,7 @@
 
 #include "WeakPointer.h"
 
-void WeakPointer::observe(std::weak_ptr<Rectangle> gw)
+void WeakPointer::Observe(std::weak_ptr<Rectangle> gw)
 {
     std::cout << "Weak Pointer use_count == " << gw.use_count() << ": ";
     if (auto spt = gw.lock()) { // Has to be copied into a shared_ptr before usage
@@ -15,7 +15,7 @@ void WeakPointer::observe(std::weak_ptr<Rectangle> gw)
     }
 }
 
-void WeakPointer::show() {
+void WeakPointer::Show() {
     std::weak_ptr<Rectangle> gw1, gw2;
     {
         cout << "-------------- Weak Pointer --------------" << endl;
@@ -23,7 +23,7 @@ void WeakPointer::show() {
         gw1 = sp;
         cout << "Smart Pointer Use Count: " << sp.use_count() << endl;
         cout << "Weak Pointer Gw1 Use Count: " <<  gw1.use_count() << endl;
-        observe(gw1);
+        Observe(gw1);
         cout << "Smart Pointer Use Count: " << sp.use_count() << endl;
         cout << "Weak Pointer Gw1 Use Count: " <<  gw1.use_count() << endl;
         cout << "Weak Pointer Gw1 Area: " <<  gw1.lock()->Area() << endl;
@@ -32,14 +32,14 @@ void WeakPointer::show() {
         gw2 = sp;
         cout << "Smart Pointer Use Count: " << sp.use_count() << endl;
         cout << "Weak Pointer Gw2 Use Count: " <<  gw2.use_count() << endl;
-        observe(gw2);
+        Observe(gw2);
         cout << "Smart Pointer Use Count: " <<  sp.use_count() << endl;
         cout << "Weak Pointer Gw2 Use Count: " <<  gw2.use_count() << endl;
     }
 
-    observe(gw1);
+    Observe(gw1);
     cout << "Smart Pointer Use Count: " <<  gw1.use_count() << endl;
-    observe(gw2);
+    Observe(gw2);
     cout << "Smart Pointer Use Count: " <<  gw2.use_count() << endl;
     // cout<<P1->area()<<endl;
     cout << "-------------- Weak Pointer --------------" << endl;

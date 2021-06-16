@@ -15,7 +15,7 @@ class SharedPointer {
     shared_ptr<Rectangle> P1, P2;
 
 public:
-    void show();
+    void Show();
 };
 
 

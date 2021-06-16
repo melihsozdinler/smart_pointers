@@ -4,7 +4,7 @@
 
 #include "UniquePointer.h"
 
-void UniquePointer::show() {
+void UniquePointer::Show() {
     cout << "------------- Unique Pointer -------------" << endl;
     unique_ptr<Rectangle> uniqueP1(new Rectangle(10, 5));
     cout << "UniqueP1 Area: " << uniqueP1->Area() << endl; // This'll print 50
